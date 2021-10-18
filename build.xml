@@ -13,7 +13,7 @@
         <echo>Java/JVM version: ${ant.java.version}</echo> 
         <echo>Java/JVM detail version: ${java.version}</echo> 
     </target>
-    <target name="-post-compile">
+    <target name="post-compile">
            <copy todir="./dist/">
             <fileset file="README.md"/>
         </copy>
