@@ -6,11 +6,12 @@ package View;
  * and open the template in the editor.
  */
 
+import java.io.IOException;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.text.*;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 //import javafx.scene.control.Button;
 //import javafx.event.ActionEvent;
@@ -22,36 +23,42 @@ import javafx.stage.Stage;
 public class App extends Application {
     
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage stage) {
+        try {
+            // load FXML Scene Builder - root node of application
+            Parent root = FXMLLoader.load(getClass().getResource("App.fxml"));
+            Scene scene = new Scene(root);
+            // set CSS stylesheet
+            String css = this.getClass().getResource("app.css").toExternalForm();
+            scene.getStylesheets().add(css);
 
-        // root node of application
-        StackPane root = new StackPane();
-        
-        // main scene of App
-        Scene scene = new Scene(root, 300, 250);
-        
-        // App icon image
-        Image iconImage = new Image("View/assets/images/scraper.png");
-        
-        primaryStage.setTitle("Scrap-A-Zon");
-        primaryStage.getIcons().add(iconImage);
-        primaryStage.setScene(scene);
-        
-        Text header = new Text("Welcome to Scrap-A-Zon");
-        
-        //root.getChilren().add(header);
-        primaryStage.show();
+            // App icon image
+            Image iconImage = new Image("View/assets/images/scraper.png");
 
-//        Button btn = new Button();
-//        btn.setText("Say 'Hello World'");
-//        btn.setOnAction(new EventHandler<ActionEvent>() {
-//            
-//            @Override
-//            public void handle(ActionEvent event) {
-//                System.out.println("Hello World!");
-//            }
-//        });
-//        root.getChildren().add(btn);
+            // set title and icon image
+            stage.setTitle("Scrap-A-Zon");
+            stage.getIcons().add(iconImage);
+
+            // set stage size
+            stage.setHeight(600);
+            stage.setWidth(900);
+
+            // default positioning of stage
+            stage.setX(50);
+            stage.setY(50);
+            stage.setScene(scene);
+        
+            //root.getChilren().add(header);
+            stage.show();
+        }
+        catch(IOException e) {
+            System.out.println("Error: An error occurred in opening the file.");
+            System.out.println(e);
+        }
+        catch(Exception e) {
+            System.out.println("Error: An unexpected error occurred.");
+            System.out.println(e);
+        }
     }
 
     /**
