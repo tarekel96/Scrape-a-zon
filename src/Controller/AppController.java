@@ -5,23 +5,47 @@
  */
 package Controller;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.fxml.Initializable;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
  *
  * @author Tarek
  */
-public class AppController implements Initializable {
-
+public class AppController {
+    
+    @FXML
+    private TextField userSearchInput;
+    
+    @FXML
+    private Label outputLabel;
+    
+    @FXML
+    private Button searchButton;
+    
+    private String userInput;
+    
+    public void submit(ActionEvent event) {
+        userInput = userSearchInput.getText();
+        
+        outputLabel.setText(userInput);
+    }
+    
+    @FXML
+    public void initialize() {
+        System.out.println("hello");
+    }
+    
     /**
      * Initializes the controller class.
      */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+//    @Override
+//    public void initialize(URL url, ResourceBundle rb) {
+//        // TODO
+//    }    
     
 }
