@@ -1,3 +1,5 @@
+package View;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -6,6 +8,7 @@
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.text.*;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -16,17 +19,22 @@ import javafx.stage.Stage;
  *
  * @author Tarek
  */
-public class HomeScene extends Application {
+public class App extends Application {
     
     @Override
     public void start(Stage primaryStage) {
 
-        
+        // root node of application
         StackPane root = new StackPane();
         
+        // main scene of App
         Scene scene = new Scene(root, 300, 250);
         
-        primaryStage.setTitle("Hello World!");
+        // App icon image
+        Image iconImage = new Image("View/assets/images/scraper.png");
+        
+        primaryStage.setTitle("Scrap-A-Zon");
+        primaryStage.getIcons().add(iconImage);
         primaryStage.setScene(scene);
         
         Text header = new Text("Welcome to Scrap-A-Zon");
