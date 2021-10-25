@@ -13,6 +13,17 @@
         <echo>Java/JVM version: ${ant.java.version}</echo> 
         <echo>Java/JVM detail version: ${java.version}</echo> 
     </target>
+    <target name="test" depends="default">
+      <mkdir dir="${report.dir}" />
+      <junit printsummary="yes">
+         <classpath>
+            <path refid="classpath" />
+         </classpath>
+         <formatter type="xml" />
+         <test name="Controller.TestTest" todir="${report.dir}" haltonfailure="yes" />
+         <test name="Controller.UserInput" todir="${report.dir}" haltonfailure="yes" />
+      </junit>
+   </target>
     <target name="post-compile">
            <copy todir="./dist/">
             <fileset file="README.md"/>
