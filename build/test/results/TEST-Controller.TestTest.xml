@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="Tarek-MacBook-Pro-Retina.local" name="Controller.TestTest" skipped="0" tests="3" time="0.371" timestamp="2021-10-25T23:45:26">
+  <properties>
+    <property name="libs.spring-framework300.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/org-apache-commons-logging.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/cglib-2.2.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-aop-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-aspects-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-beans-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-context-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-context-support-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-core-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-expression-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-instrument-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-instrument-tomcat-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-jdbc-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-jms-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-orm-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-oxm-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-struts-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-test-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-tx-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-web-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-webmvc-3.2.18.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-webmvc-portlet-3.2.18.RELEASE.jar" />
+    <property name="javac.test.classpath" value="/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/javaws.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/deploy.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/plugin.jar:build/classes:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/junit-4.13.1.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/hamcrest-core-1.3.jar" />
+    <property name="java.specification.version" value="16" />
+    <property name="javafx.run.inbrowser.path" value="/usr/bin/open" />
+    <property name="jar.index.metainf" value="false" />
+    <property name="libs.spring-framework500.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/org-apache-commons-logging.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/cglib-2.2.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-aop-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-aspects-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-beans-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-context-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-context-indexer-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-context-support-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-core-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-expression-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-instrument-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-jcl-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-jdbc-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-jms-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-messaging-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-orm-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-oxm-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-test-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-tx-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-web-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-webflux-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-webmvc-5.2.9.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-websocket-5.2.9.RELEASE.jar" />
+    <property name="libs.spring-framework400.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/org-apache-commons-logging.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/cglib-2.2.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-aop-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-aspects-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-beans-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-context-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-context-support-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-core-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-expression-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-instrument-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-instrument-tomcat-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-jdbc-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-jms-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-messaging-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-orm-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-oxm-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-test-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-tx-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-web-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-webmvc-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-webmvc-portlet-4.3.29.RELEASE.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-websocket-4.3.29.RELEASE.jar" />
+    <property name="javafx.preloader.project.path" value="" />
+    <property name="libs.spring-webmvc4.0.javadoc" value="" />
+    <property name="test.binaryincludes" value="&lt;nothing&gt;" />
+    <property name="debug-transport" value="dt_socket" />
+    <property name="do.jlink" value="false" />
+    <property name="ant.file.type.jfx-impl" value="file" />
+    <property name="libs.javaee-web-api-8.0.src" value="" />
+    <property name="javafx.run.inbrowser" value="&lt;Default System Browser&gt;" />
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues" />
+    <property name="debug.modulepath" value="" />
+    <property name="libs.eclipselink.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/docs/javax.persistence-2.2.1-doc.zip" />
+    <property name="libs.jsp-compilation.src" value="" />
+    <property name="libs.JWSAntTasks.javadoc" value="" />
+    <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner Controller.TestTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/Tarek/Documents/CPSC_Courses/SE_330/Scrape-a-zon/build/test/results/TEST-Controller.TestTest.xml crashfile=/Users/Tarek/Documents/CPSC_Courses/SE_330/Scrape-a-zon/build/junitvmwatcher17400554093476131873.properties propsfile=/Users/Tarek/Documents/CPSC_Courses/SE_330/Scrape-a-zon/build/junit18080911760140063011.properties" />
+    <property name="jdk.debug" value="release" />
+    <property name="javafx.enable.concurrent.external.runs" value="false" />
+    <property name="libs.spring-framework300.src" value="" />
+    <property name="javadoc.use" value="true" />
+    <property name="javadoc.notree" value="false" />
+    <property name="basedir" value="/Users/Tarek/Documents/CPSC_Courses/SE_330/Scrape-a-zon" />
+    <property name="application.vendor" value="Tarek" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="libs.jsf20.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jsf-2_2/javax.faces.jar" />
+    <property name="libs.spring-framework500.javadoc" value="" />
+    <property name="libs.jsp-compilation-syscp.src" value="" />
+    <property name="java.runtime.version" value="16.0.2+0" />
+    <property name="libs.eclipselink.maven-pom" value="" />
+    <property name="libs.metro.maven-pom" value="" />
+    <property name="libs.JAXB-ENDORSED.javadoc" value="" />
+    <property name="libs.primefaces.javadoc" value="" />
+    <property name="libs.jsp-compilation.javadoc" value="" />
+    <property name="libs.jsf12.src" value="" />
+    <property name="libs.groovy-all.maven-pom" value="" />
+    <property name="java.vendor.version" value="Homebrew" />
+    <property name="libs.restapi.src" value="" />
+    <property name="javafx.deploy.adddesktopshortcut" value="false" />
+    <property name="libs.junit_5.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/docs/junit-jupiter-api-5.6.0-javadoc.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/docs/junit-jupiter-params-5.6.0-javadoc.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/docs/junit-jupiter-engine-5.6.0-javadoc.jar" />
+    <property name="jnlp.enabled" value="false" />
+    <property name="java.io.tmpdir" value="/var/folders/60/y3ghgqm10bgcylfwrkwb7y040000gs/T/" />
+    <property name="java.version" value="16.0.2" />
+    <property name="libs.jakartaee-api-8.0.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/jakartaee8-doc-api.jar" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.file.jfx-impl" value="/Users/Tarek/Documents/CPSC_Courses/SE_330/Scrape-a-zon/nbproject/jfx-impl.xml" />
+    <property name="java.library.path" value="/Users/Tarek/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+    <property name="libs.hamcrest.src" value="" />
+    <property name="java.vendor" value="Homebrew" />
+    <property name="libs.testng.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/docs/testng-6.13.1-javadoc.jar" />
+    <property name="libs.groovy-all.src" value="" />
+    <property name="meta.inf.dir" value="src/META-INF" />
+    <property name="compile.on.save" value="true" />
+    <property name="libs.testng.maven-pom" value="" />
+    <property name="run.classpath" value="dist/Scrap-a-zon.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/javaws.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/deploy.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/plugin.jar:build/classes" />
+    <property name="ant.file.type" value="file" />
+    <property name="libs.jaxb.src" value="" />
+    <property name="test.src.dir" value="test" />
+    <property name="libs.spring-framework300.javadoc" value="" />
+    <property name="ap.proc.none.internal" value="" />
+    <property name="jar.index" value="false" />
+    <property name="libs.jpa20-persistence.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/eclipselink/javax.persistence-2.2.1.jar" />
+    <property name="libs.junit_5.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/junit-jupiter-api-5.6.0.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/junit-jupiter-params-5.6.0.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/junit-jupiter-engine-5.6.0.jar" />
+    <property name="java.vm.specification.version" value="16" />
+    <property name="libs.eclipselinkmodelgen.javadoc" value="" />
+    <property name="javadoc.noindex" value="false" />
+    <property name="javadoc.private" value="false" />
+    <property name="libs.spring-webmvc4.0.maven-pom" value="" />
+    <property name="javafx.preloader.enabled" value="false" />
+    <property name="libs.JAXB-ENDORSED.maven-pom" value="" />
+    <property name="user.home" value="/Users/Tarek" />
+    <property name="libs.eclipselinkmodelgen.maven-pom" value="" />
+    <property name="have.sources" value="true" />
+    <property name="javafx.signing.enabled" value="false" />
+    <property name="annotation.processing.processors.list" value="" />
+    <property name="javac.deprecation" value="false" />
+    <property name="jlink.launcher" value="false" />
+    <property name="javafx.preloader.jar.filename" value="" />
+    <property name="libs.CSSFX.classpath" value="/Users/Tarek/Documents/CPSC_Courses/SE_330/Jar/cssfx-1.1.1.jar" />
+    <property name="build.generated.sources.dir" value="build/generated-sources" />
+    <property name="libs.eclipselinkmodelgen.src" value="" />
+    <property name="build.classes.excludes" value="**/*.java,**/*.form" />
+    <property name="dist.jar" value="dist/Scrap-a-zon.jar" />
+    <property name="libs.jakartaee-web-api-9.0.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jakarta.jakartaee-web-api-9.0.0.jar" />
+    <property name="libs.spring-webmvc4.0.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-4/spring-webmvc-4.3.29.RELEASE.jar" />
+    <property name="libs.javaee-endorsed-api-7.0.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="os.version" value="11.6" />
+    <property name="libs.CopyLibs.javadoc" value="" />
+    <property name="debug-transport-by-os" value="dt_socket" />
+    <property name="libs.jsf20.src" value="" />
+    <property name="libs.javaee-api-8.0.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM" />
+    <property name="libs.jstl.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.javaee-endorsed-api-7.0.maven-pom" value="" />
+    <property name="libs.jaxws21.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/ide/modules/ext/jaxb/jaxb-impl.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/ide/modules/ext/jaxb/jaxb-xjc.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/FastInfoset.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/gmbal-api-only.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/ha-api.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/javax.mail_1.4.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/jaxws-rt.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/jaxws-tools.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/management-api.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/mimepull.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/policy.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/saaj-impl.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/stax-ex.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/stax2-api.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/streambuffer.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/woodstox-core-asl.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/api/jaxws-api.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/api/jsr181-api.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/api/javax.annotation.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/jaxws22/api/saaj-api.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/ide/modules/ext/jaxb/activation.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/ide/modules/ext/jaxb/api/jaxb-api.jar" />
+    <property name="libs.restapi.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jaxrs-2.0/javax.ws.rs-api-2.0.jar" />
+    <property name="os.arch" value="x86_64" />
+    <property name="build.generated.dir" value="build/generated" />
+    <property name="libs.groovy-all.javadoc" value="" />
+    <property name="javafx.deploy.embedJNLP" value="true" />
+    <property name="libs.jakartaee-api-8.0.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jakarta.jakartaee-api-8.0.0.jar" />
+    <property name="javafx.deploy.includeDT" value="true" />
+    <property name="libs.javaee-web-api-7.0.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.javaee-endorsed-api-6.0.src" value="" />
+    <property name="libs.jsf12.maven-pom" value="" />
+    <property name="libs.javaee-endorsed-api-7.0.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/javaee7-endorsed/javax.annotation-api.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/javaee7-endorsed/javax.xml.soap-api.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/javaee7-endorsed/jaxb-api-osgi.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/javaee7-endorsed/jaxws-api.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/javaee7-endorsed/jsr181-api.jar" />
+    <property name="libs.primefaces.maven-pom" value="" />
+    <property name="ant.library.dir" value="/usr/local/Cellar/ant/1.10.11/libexec/lib" />
+    <property name="ant.project.name" value="Scrap-a-zon" />
+    <property name="dist.javadoc.dir" value="dist/javadoc" />
+    <property name="default.javac.target" value="1.8" />
+    <property name="javac.fork" value="false" />
+    <property name="libs.eclipselink.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.core-2.7.7.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.asm-2.7.7.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.antlr-2.7.7.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa-2.7.7.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql-2.7.7.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.moxy-2.7.7.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/eclipselink/javax.persistence-2.2.1.jar" />
+    <property name="libs.struts.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/antlr-2.7.2.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/bsf-2.3.0.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/commons-beanutils-1.8.0.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/commons-chain-1.2.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/commons-digester-1.8.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/commons-fileupload-1.1.1.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/commons-io-1.1.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/commons-logging-1.0.4.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/commons-validator-1.3.1.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/jstl-1.0.2.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/oro-2.0.8.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/standard-1.0.6.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/struts-core-1.3.10.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/struts-el-1.3.10.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/struts-extras-1.3.10.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/struts-faces-1.3.10.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/struts-mailreader-dao-1.3.10.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/struts-scripting-1.3.10.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/struts-taglib-1.3.10.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/struts/struts-tiles-1.3.10.jar" />
+    <property name="libs.PostgreSQLDriver.maven-pom" value="" />
+    <property name="libs.absolutelayout.src" value="" />
+    <property name="testng.mode" value="testng" />
+    <property name="annotation.processing.enabled.in.editor" value="false" />
+    <property name="javafx.classpath.extension" value="/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/javaws.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/deploy.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/plugin.jar" />
+    <property name="java.vm.compressedOopsMode" value="Zero based" />
+    <property name="native.bundling.enabled" value="false" />
+    <property name="libs.CSSFX.maven-pom" value="" />
+    <property name="libs.CSSFX.src" value="" />
+    <property name="mkdist.disabled" value="false" />
+    <property name="libs.javaee-web-api-6.0.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.groovy-all.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/groovy/modules/ext/groovy.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/groovy/modules/ext/groovy-ant.jar" />
+    <property name="libs.javaee-api-7.0.maven-pom" value="" />
+    <property name="libs.absolutelayout.javadoc" value="" />
+    <property name="annotation.processing.processor.options" value="" />
+    <property name="libs.jaxb.maven-pom" value="" />
+    <property name="libs.javaee-api-6.0.maven-pom" value="" />
+    <property name="dist.dir" value="dist" />
+    <property name="build.dir" value="build" />
+    <property name="libs.graaljs.maven-pom" value="" />
+    <property name="javadoc.version" value="false" />
+    <property name="libs.metro.src" value="" />
+    <property name="libs.metro.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/ide/modules/ext/jaxb/activation.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/metro/webservices-api.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/metro/webservices-extra-api.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/metro/webservices-extra.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/metro/webservices-rt.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/metro/webservices-tools.jar" />
+    <property name="libs.CopyLibs.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/ant/extra/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
+    <property name="javadoc.html5" value="false" />
+    <property name="javac.test.processorpath" value="/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/javaws.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/deploy.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/plugin.jar:build/classes:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/junit-4.13.1.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/hamcrest-core-1.3.jar" />
+    <property name="libs.javaee-web-api-7.0.maven-pom" value="" />
+    <property name="libs.javaee-web-api-8.0.maven-pom" value="" />
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="javafx.deploy.allowoffline" value="true" />
+    <property name="libs.hamcrest.maven-pom" value="" />
+    <property name="javafx.signing.blob" value="false" />
+    <property name="javac.processorpath" value="/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/javaws.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/deploy.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/plugin.jar" />
+    <property name="libs.javaee-api-6.0.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.JWSAntTasks.maven-pom" value="" />
+    <property name="javafx.run.width" value="800" />
+    <property name="javafx.rebase.libs" value="false" />
+    <property name="javafx.preloader.class" value="" />
+    <property name="run.modulepath" value="" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="user.country" value="US" />
+    <property name="libs.jakartaee-api-9.0.maven-pom" value="" />
+    <property name="libs.restapi.javadoc" value="" />
+    <property name="libs.jpa20-persistence.src" value="" />
+    <property name="endorsed.classpath" value="" />
+    <property name="javac.test.sourcepath" value="/Users/Tarek/Documents/CPSC_Courses/SE_330/Scrape-a-zon/build/empty" />
+    <property name="libs.spring-webmvc3.0.maven-pom" value="" />
+    <property name="includes" value="**" />
+    <property name="libs.jsf12.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.hamcrest.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/hamcrest-core-1.3.jar" />
+    <property name="javadoc.splitindex" value="true" />
+    <property name="libs.JWSAntTasks.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/ant/extra/org-netbeans-modules-javawebstart-anttasks.jar" />
+    <property name="junit.available" value="true" />
+    <property name="javac.processormodulepath" value="" />
+    <property name="javadoc.encoding" value="UTF-8" />
+    <property name="libs.jsp-compilation-syscp.maven-pom" value="" />
+    <property name="libs.jstl.src" value="" />
+    <property name="jlink.strip" value="false" />
+    <property name="libs.spring-webmvc3.0.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-3.0/spring-webmvc-3.2.18.RELEASE.jar" />
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
+    <property name="manifest.available" value="true" />
+    <property name="libs.jaxb.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/ide/docs/jaxb-api-doc.jar" />
+    <property name="libs.spring-framework500.maven-pom" value="" />
+    <property name="run.jvmargs.ide" value="" />
+    <property name="ant.core.lib" value="/usr/local/Cellar/ant/1.10.11/libexec/lib/ant.jar" />
+    <property name="libs.jsp-compilation.maven-pom" value="" />
+    <property name="javac.profile.cmd.line.arg" value="" />
+    <property name="libs.jakartaee-api-9.0.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jakarta.jakartaee-api-9.0.0.jar" />
+    <property name="application.title" value="Scrap-a-zon" />
+    <property name="javac.test.modulepath" value="" />
+    <property name="libs.PostgreSQLDriver.javadoc" value="" />
+    <property name="javafx.deploy.addstartmenushortcut" value="false" />
+    <property name="libs.jsp-compilation-syscp.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/extide/ant/lib/ant.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/servlet3.1-jsp2.3-api.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/glassfish-jspparser-4.0.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jstl-impl.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jsf-2_2/javax.faces.jar" />
+    <property name="libs.jsp-compilation.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/extide/ant/lib/ant.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/servlet3.1-jsp2.3-api.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/glassfish-jspparser-4.0.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jsf-2_2/javax.faces.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jstl-api.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/extide/ant/lib/ant-launcher.jar" />
+    <property name="libs.javaee-api-6.0.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/javaee-api-6.0.jar" />
+    <property name="libs.javaee-api-7.0.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/javaee-api-7.0.jar" />
+    <property name="libs.restapi.maven-pom" value="" />
+    <property name="auxiliary.org-netbeans-modules-projectapi.issue214819_5f_fx_5f_enabled" value="true" />
+    <property name="javadoc.preview" value="true" />
+    <property name="do.depend" value="false" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="libs.jakartaee-web-api-9.0.maven-pom" value="" />
+    <property name="libs.javaee-endorsed-api-7.0.src" value="" />
+    <property name="javafx.signing.type" value="notsigned" />
+    <property name="annotation.processing.enabled" value="true" />
+    <property name="libs.junit_5.src" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/docs/junit-jupiter-api-5.6.0-sources.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/docs/junit-jupiter-params-5.6.0-sources.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/docs/junit-jupiter-engine-5.6.0-sources.jar" />
+    <property name="libs.jaxb.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/ide/modules/ext/jaxb/jaxb-impl.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/ide/modules/ext/jaxb/jaxb-xjc.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/ide/modules/ext/jaxb/activation.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/ide/modules/ext/jaxb/api/jaxb-api.jar" />
+    <property name="libs.javaee-api-8.0.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/javaee-api-8.0.jar" />
+    <property name="libs.CopyLibs.src" value="" />
+    <property name="javafx.deploy.permissionselevated" value="false" />
+    <property name="javafx.enabled" value="true" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="javac.source" value="1.8" />
+    <property name="java.version.date" value="2021-07-20" />
+    <property name="java.home" value="/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home" />
+    <property name="work.dir" value="/Users/Tarek/Documents/CPSC_Courses/SE_330/Scrape-a-zon" />
+    <property name="ant.file.type.Scrap-a-zon-impl" value="file" />
+    <property name="javac.test.compilerargs" value="" />
+    <property name="libs.PostgreSQLDriver.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/ide/modules/ext/postgresql-42.2.16.jar" />
+    <property name="libs.graaljs.javadoc" value="" />
+    <property name="libs.spring-webmvc3.0.javadoc" value="" />
+    <property name="libs.JAXB-ENDORSED.src" value="" />
+    <property name="manifest.encoding" value="UTF-8" />
+    <property name="manifest.custom.permissions" value="" />
+    <property name="libs.spring-framework400.src" value="" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="run.test.modulepath" value="" />
+    <property name="javafx.main.class" value="View.App" />
+    <property name="libs.javaee-web-api-6.0.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/javaee-web-api-6.0.jar" />
+    <property name="libs.graaljs.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/webcommon/modules/ext/js-20.2.0.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/webcommon/modules/ext/js-launcher-20.2.0.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/webcommon/modules/ext/regex-20.2.0.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/webcommon/modules/ext/icu4j-67.1.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/ide/modules/ext/graal-sdk-20.2.0.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/ide/modules/ext/launcher-common-20.2.0.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/ide/modules/ext/truffle-api-20.2.0.jar" />
+    <property name="libs.jsp-compiler.javadoc" value="" />
+    <property name="debug.test.modulepath" value="" />
+    <property name="libs.javaee-web-api-7.0.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/javaee-web-api-7.0.jar" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="libs.restlib.javadoc" value="" />
+    <property name="libs.absolutelayout.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/AbsoluteLayout.jar" />
+    <property name="libs.CSSFX.javadoc" value="" />
+    <property name="libs.struts.maven-pom" value="" />
+    <property name="built-jar.properties" value="/Users/Tarek/Documents/CPSC_Courses/SE_330/Scrape-a-zon/build/built-jar.properties" />
+    <property name="libs.testng.src" value="" />
+    <property name="platform.active" value="default_platform" />
+    <property name="libs.javaee-web-api-8.0.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/javaee-web-api-8.0.jar" />
+    <property name="manifest.file" value="manifest.mf" />
+    <property name="endorsed.javafx.ant.classpath" value="." />
+    <property name="sun.io.unicode.encoding" value="UnicodeBig" />
+    <property name="libs.struts.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/struts-1.3.10-javadoc.zip" />
+    <property name="default.javac.source" value="1.8" />
+    <property name="libs.javaee-web-api-8.0.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.eclipselinkmodelgen.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.modelgen.processor-2.7.7.jar" />
+    <property name="endorsed.classpath.cmd.line.arg" value="" />
+    <property name="libs.jpa20-persistence.maven-pom" value="" />
+    <property name="os.name" value="Mac OS X" />
+    <property name="build.sysclasspath" value="ignore" />
+    <property name="libs.CopyLibs.maven-pom" value="" />
+    <property name="libs.jakartaee-api-8.0.maven-pom" value="" />
+    <property name="jdkBug6558476" value="false" />
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="javadoc.author" value="false" />
+    <property name="main.class" value="com.javafx.main.Main" />
+    <property name="libs.jsp-compilation-syscp.javadoc" value="" />
+    <property name="source.encoding" value="UTF-8" />
+    <property name="jar.compress" value="false" />
+    <property name="libs.javaee-api-7.0.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.spring-webmvc5.0.src" value="" />
+    <property name="libs.jsf20.maven-pom" value="" />
+    <property name="libs.restlib.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/ext/asm-all-repackaged-2.2.0-b21.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/ext/cglib-2.2.0-b21.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/ext/guava-14.0.1.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/ext/hk2-api-2.2.0-b21.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/ext/hk2-locator-2.2.0-b21.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/ext/hk2-utils-2.2.0-b21.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/ext/javax.annotation-api-1.2.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/ext/javax.inject-2.2.0-b21.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/ext/javax.servlet-api-3.0.1.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/ext/jaxb-api-2.2.7.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/ext/jersey-entity-filtering-2.5.1.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/ext/jersey-media-moxy-2.5.1.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/ext/org.osgi.core-4.2.0.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/ext/osgi-resource-locator-1.0.1.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/ext/persistence-api-1.0.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/ext/validation-api-1.1.0.Final.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/jersey-client.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/jersey-common.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/jersey-container-servlet.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/jersey-container-servlet-core.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jersey2/jersey-server.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.core-2.7.7.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.asm-2.7.7.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.antlr-2.7.7.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa-2.7.7.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql-2.7.7.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.moxy-2.7.7.jar" />
+    <property name="libs.jakartaee-web-api-8.0.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/jakartaee8-doc-api.jar" />
+    <property name="libs.graaljs.src" value="" />
+    <property name="run.jvmargs" value="" />
+    <property name="libs.primefaces.src" value="" />
+    <property name="javafx.fallback.class" value="com.javafx.main.NoJavaFXFallback" />
+    <property name="ant.file" value="/Users/Tarek/Documents/CPSC_Courses/SE_330/Scrape-a-zon/build.xml" />
+    <property name="libs.struts.src" value="" />
+    <property name="path.separator" value=":" />
+    <property name="libs.JAXB-ENDORSED.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/ide/modules/ext/jaxb/api/jaxb-api.jar" />
+    <property name="libs.restlib.src" value="" />
+    <property name="build.test.results.dir" value="build/test/results" />
+    <property name="libs.jaxws21.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/docs/jaxws-api-doc.zip" />
+    <property name="libs.javaee-endorsed-api-6.0.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.spring-framework400.maven-pom" value="" />
+    <property name="ap.processors.internal" value="" />
+    <property name="libs.jsf12.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jsf-1_2/jsf-api.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jsf-1_2/jsf-impl.jar" />
+    <property name="libs.spring-webmvc5.0.javadoc" value="" />
+    <property name="libs.spring-framework400.javadoc" value="" />
+    <property name="libs.hamcrest.javadoc" value="" />
+    <property name="do.jar" value="true" />
+    <property name="java.vm.info" value="mixed mode, sharing" />
+    <property name="libs.primefaces.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/primefaces/primefaces-5.0.jar" />
+    <property name="libs.jaxws21.maven-pom" value="" />
+    <property name="run.test.classpath" value="/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/javaws.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/deploy.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/plugin.jar:build/classes:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/junit-4.13.1.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:build/test/classes" />
+    <property name="javadoc.encoding.used" value="UTF-8" />
+    <property name="java.class.version" value="60.0" />
+    <property name="src.dir" value="src" />
+    <property name="debug.classpath" value="dist/Scrap-a-zon.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/javaws.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/deploy.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/plugin.jar:build/classes" />
+    <property name="ant.project.default-target" value="default" />
+    <property name="excludes" value="" />
+    <property name="libs.javaee-api-7.0.src" value="" />
+    <property name="run.test.jvmargs" value="" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="libs.junit_4.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/docs/junit-4.13.1-javadoc.jar" />
+    <property name="javafx.preloader.jar.path" value="" />
+    <property name="javafx.run.height" value="600" />
+    <property name="libs.spring-webmvc4.0.src" value="" />
+    <property name="main.class.available" value="true" />
+    <property name="libs.jsf20.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="ant.file.Scrap-a-zon-impl" value="/Users/Tarek/Documents/CPSC_Courses/SE_330/Scrape-a-zon/nbproject/build-impl.xml" />
+    <property name="jar.archive.disabled" value="true" />
+    <property name="empty.dir" value="/Users/Tarek/Documents/CPSC_Courses/SE_330/Scrape-a-zon/build/empty" />
+    <property name="javafx.deploy.installpermanently" value="false" />
+    <property name="file.separator" value="/" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="javadoc.additionalparam" value="" />
+    <property name="libs.spring-webmvc5.0.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/spring-5/spring-webmvc-5.2.9.RELEASE.jar" />
+    <property name="javac.debug" value="true" />
+    <property name="libs.restlib.maven-pom" value="" />
+    <property name="libs.testng.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/testng-6.14.3.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/jcommander-1.78.jar" />
+    <property name="libs.jsp-compiler.src" value="" />
+    <property name="user.name" value="Tarek" />
+    <property name="build.classes.dir" value="build/classes" />
+    <property name="nb.junit.single" value="false" />
+    <property name="javadoc.windowtitle" value="" />
+    <property name="libs.javaee-api-8.0.maven-pom" value="" />
+    <property name="libs.jaxws21.src" value="" />
+    <property name="javafx.disable.concurrent.runs" value="false" />
+    <property name="compile.on.save.unsupported.javafx" value="false" />
+    <property name="libs.jakartaee-web-api-9.0.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/jakartaee9-doc-api.jar" />
+    <property name="libs.junit_5.maven-pom" value="" />
+    <property name="libs.jpa20-persistence.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/java/modules/ext/docs/javax.persistence-2.2.1-doc.zip" />
+    <property name="libs.JWSAntTasks.src" value="" />
+    <property name="libs.spring-webmvc3.0.src" value="" />
+    <property name="ant.home" value="/usr/local/Cellar/ant/1.10.11/libexec" />
+    <property name="javac.external.vm" value="false" />
+    <property name="have.tests" value="true" />
+    <property name="debug.test.classpath" value="/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/javaws.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/deploy.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/plugin.jar:build/classes:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/junit-4.13.1.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:build/test/classes" />
+    <property name="testng.debug.mode" value="" />
+    <property name="javac.target" value="1.8" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.10.11 compiled on July 10 2021" />
+    <property name="libs.absolutelayout.maven-pom" value="" />
+    <property name="ant.file.type.Scrap-a-zon" value="file" />
+    <property name="java.failonerror" value="true" />
+    <property name="javac.modulepath" value="" />
+    <property name="libs.spring-framework500.src" value="" />
+    <property name="javafx.binarycss" value="false" />
+    <property name="libs.javaee-api-6.0.src" value="" />
+    <property name="user.properties.file" value="/Users/Tarek/Library/Application Support/NetBeans/12.4/build.properties" />
+    <property name="java.class.path" value="/Users/Tarek/Documents/CPSC_Courses/SE_330/Scrape-a-zon/build/classes:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/junit-4.13.1.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/hamcrest-core-1.3.jar:/Users/Tarek/Documents/CPSC_Courses/SE_330/Scrape-a-zon/build/test/classes:/usr/local/Cellar/ant/1.10.11/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.10.11/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.10.11/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.10.11/libexec/lib/ant-junit4.jar" />
+    <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
+    <property name="java.vm.vendor" value="Homebrew" />
+    <property name="javafx.deploy.backgroundupdate" value="false" />
+    <property name="ap.supported.internal" value="true" />
+    <property name="test.binaryexcludes" value="" />
+    <property name="javac.compilerargs" value="" />
+    <property name="libs.jstl.maven-pom" value="" />
+    <property name="libs.jakartaee-web-api-8.0.src" value="" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="libs.junit_4.src" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/docs/junit-4.13.1-sources.jar" />
+    <property name="libs.jakartaee-api-9.0.src" value="" />
+    <property name="user.language" value="en" />
+    <property name="copylibs.rebase" value="true" />
+    <property name="libs.javaee-web-api-6.0.src" value="" />
+    <property name="javadoc.nonavbar" value="false" />
+    <property name="libs.javaee-api-8.0.src" value="" />
+    <property name="ant.java.version" value="16" />
+    <property name="javafx.deploy.disable.proxy" value="false" />
+    <property name="libs.junit_4.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/platform/modules/ext/junit-4.13.1.jar" />
+    <property name="libs.jakartaee-api-9.0.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/jakartaee9-doc-api.jar" />
+    <property name="jlink.launcher.name" value="Scrap-a-zon" />
+    <property name="ant.file.Scrap-a-zon" value="/Users/Tarek/Documents/CPSC_Courses/SE_330/Scrape-a-zon/build.xml" />
+    <property name="test.binarytestincludes" value="" />
+    <property name="libs.junit_4.maven-pom" value="" />
+    <property name="libs.spring-webmvc5.0.maven-pom" value="" />
+    <property name="libs.jsp-compiler.maven-pom" value="" />
+    <property name="runtime.encoding" value="UTF-8" />
+    <property name="javac.classpath" value="/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/javaws.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/deploy.jar:/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/lib/plugin.jar" />
+    <property name="libs.jakartaee-web-api-8.0.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jakarta.jakartaee-web-api-8.0.0.jar" />
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="nb.junit.batch" value="true" />
+    <property name="build.test.classes.dir" value="build/test/classes" />
+    <property name="javafx.application.implementation.version" value="1.0" />
+    <property name="javafx.preloader.type" value="none" />
+    <property name="libs.spring-framework300.maven-pom" value="" />
+    <property name="ant.project.invoked-targets" value="test" />
+    <property name="libs.jstl.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jstl-impl.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/jstl-api.jar" />
+    <property name="ap.cmd.line.internal" value="" />
+    <property name="libs.PostgreSQLDriver.src" value="" />
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues" />
+    <property name="annotation.processing.source.output" value="build/generated-sources/ap-source-output" />
+    <property name="user.dir" value="/Users/Tarek/Documents/CPSC_Courses/SE_330/Scrape-a-zon" />
+    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
+    <property name="platform.java" value="/usr/local/Cellar/openjdk/16.0.2/libexec/openjdk.jdk/Contents/Home/bin/java" />
+    <property name="application.args" value="" />
+    <property name="libs.jakartaee-web-api-8.0.maven-pom" value="" />
+    <property name="libs.eclipselink.src" value="" />
+    <property name="manifest.custom.codebase" value="*" />
+    <property name="java.vm.version" value="16.0.2+0" />
+    <property name="libs.metro.javadoc" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/webservices-api-javadoc.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/webservices-extra-javadoc.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/webservices-extra-api-javadoc.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/webservices-rt-javadoc.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/docs/webservices-tools-javadoc.jar" />
+    <property name="libs.jakartaee-web-api-9.0.src" value="" />
+    <property name="libs.jakartaee-api-8.0.src" value="" />
+    <property name="annotation.processing.run.all.processors" value="true" />
+    <property name="libs.javaee-web-api-7.0.src" value="" />
+    <property name="junit.forkmode" value="perTest" />
+    <property name="libs.jsp-compiler.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/ant/extra/jspcompile.jar" />
+    <property name="libs.javaee-endorsed-api-6.0.classpath" value="/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/javaee6-endorsed/javax.annotation.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/Applications/NetBeans/Apache NetBeans 12.4.app/Contents/Resources/NetBeans/netbeans/enterprise/modules/ext/javaee6-endorsed/webservices-api-osgi.jar" />
+  </properties>
+  <testcase classname="Controller.TestTest" name="testGiveA" time="0.002" />
+  <testcase classname="Controller.TestTest" name="testGiveB" time="0.0" />
+  <testcase classname="Controller.TestTest" name="testGiveC" time="0.0" />
+  <system-out><![CDATA[giveA
+giveB
+giveC
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
