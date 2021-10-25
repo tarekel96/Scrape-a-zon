@@ -13,6 +13,7 @@
         <echo>Java/JVM version: ${ant.java.version}</echo> 
         <echo>Java/JVM detail version: ${java.version}</echo> 
     </target>
+    <!-- Test tags -->
    <target name="run" depends="default">
     <junit printsummary="on" haltonfailure="yes">
         <classpath>
