@@ -14,17 +14,24 @@
         <echo>Java/JVM detail version: ${java.version}</echo> 
     </target>
     <!-- Test tags -->
-   <target name="run" depends="default">
-    <junit printsummary="on" haltonfailure="yes">
-        <classpath>
-          <path refid="classpath.test" />
-          <pathelement location="${test.build.dir}"/>
-        </classpath>
-        <formatter type="brief" usefile="false" />
-        <batchtest>
-            <fileset dir="${test.src.dir}" includes="**/*Test*.java" />
-        </batchtest>
-    </junit>
+  <target name="junit" depends="default">
+
+	<junit printsummary="yes" haltonfailure="no">
+
+		<classpath refid="/usr/lib/JUNIT_HOME" />
+		<classpath location="${build.dir}" />
+						
+		<!-- Make sure these two libraries are included -->
+		<classpath location="lib/junit-4.11.jar" />
+		<classpath location="lib/hamcrest-core-1.3.jar" />
+			
+		<test name="Controller.TestTest" 
+			haltonfailure="no" todir="${report.dir}" outfile="result">
+			<formatter type="plain" />
+			<formatter type="xml" />
+		</test>
+
+	</junit>
   </target>
     <target name="post-compile">
            <copy todir="./dist/">
