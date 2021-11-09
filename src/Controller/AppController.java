@@ -10,10 +10,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 /**
  * FXML Controller class
@@ -22,48 +18,27 @@ import org.jsoup.select.Elements;
  */
 public class AppController {
     
+    /* ************** FIELDS ************** */
+    
+    // FXML fields
     @FXML
     private TextField userSearchInput;
-    
     @FXML
     private Label outputLabel;
-    
     @FXML
     private Button searchButton;
     
+    // Non-FXML fields 
+    private WebScraper Scraper;
+    
     private String userInput;
+   
+   
     
-    public String testJsoup() {
-        String html = "<html><head><title>Sample Title</title></head>"
-                + "<body><p>Sample Content</p></body></html>";
-        String parsedText = "";
-        Document document = Jsoup.parse(html);
-        System.out.println(document.title());
-        Elements paragraphs = document.getElementsByTag("p");
-        for (Element paragraph : paragraphs) {
-            parsedText += paragraph.text();
-        }
-        return parsedText;
-    }
-    
+    /* ************** Methods ************** */
     public void submit(ActionEvent event) {
         userInput = userSearchInput.getText();
-        
-//        outputLabel.setText(userInput);
-        outputLabel.setText("amazon.com/" + userInput);
+        Scraper = new WebScraper(userInput);
+        Scraper.fetchData();
     }
-    
-    @FXML
-    public void initialize() {
-        System.out.println("hello");
-    }
-    
-    /**
-     * Initializes the controller class.
-     */
-//    @Override
-//    public void initialize(URL url, ResourceBundle rb) {
-//        // TODO
-//    }    
-    
 }
