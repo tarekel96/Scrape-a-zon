@@ -50,7 +50,7 @@ public class AppController {
         userInput = userSearchInput.getText();
         
 //        outputLabel.setText(userInput);
-        outputLabel.setText(testJsoup());
+        outputLabel.setText("amazon.com/" + userInput);
     }
     
     @FXML
