@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
@@ -29,5 +30,10 @@
             <Font size="20.0" />
          </font>
       </Label>
+      <ProgressBar id="scrapeProgressBar" layoutX="243.0" layoutY="271.0" prefHeight="40.0" prefWidth="314.0" progress="0.0" styleClass="scrapeProgressBar">
+         <effect>
+            <Blend />
+         </effect>
+      </ProgressBar>
    </children>
 </AnchorPane>

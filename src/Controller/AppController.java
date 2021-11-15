@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 
 /**
@@ -27,18 +28,33 @@ public class AppController {
     private Label outputLabel;
     @FXML
     private Button searchButton;
+    @FXML
+    private ProgressBar scrapeProgressBar;
+    
+//    @FXML
+//    private void initialize() {
+//        System.out.println(scrapeProgressBar.toString());
+//    }
     
     // Non-FXML fields 
     private WebScraper Scraper;
-    
     private String userInput;
-   
+    private boolean m_loading;
    
     
     /* ************** Methods ************** */
+    // loading mutator
+    public void setLoading(boolean loading) {
+        m_loading = loading;
+    }
+    // loading accessor
+    public boolean getLoading() {
+        return m_loading;
+    }
+    
     public void submit(ActionEvent event) {
         userInput = userSearchInput.getText();
-        Scraper = new WebScraper(userInput);
-        Scraper.fetchData();
+        Scraper = new WebScraper(userInput, outputLabel);
+        Scraper.fetchData(getLoading(), outputLabel);
     }
 }

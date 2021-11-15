@@ -13,7 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import org.fxmisc.cssfx.CSSFX;
+//import org.fxmisc.cssfx.CSSFX;
 //import javafx.scene.control.Button;
 //import javafx.event.ActionEvent;
 //import javafx.event.EventHandler;
@@ -32,7 +32,7 @@ public class App extends Application {
             // set CSS stylesheet
             String css = this.getClass().getResource("app.css").toExternalForm();
             scene.getStylesheets().add(css);
-            CSSFX.start();
+            //CSSFX.start();
 
             // App icon image
             Image iconImage = new Image("View/assets/images/scraper.png");

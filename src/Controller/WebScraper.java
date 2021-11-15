@@ -8,6 +8,7 @@ package Controller;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.SocketTimeoutException;
+import javafx.scene.control.Label;
 import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.UnsupportedMimeTypeException;
@@ -21,16 +22,16 @@ import org.jsoup.nodes.Element;
 public class WebScraper {
     
     // Overloaded Constructor
-    public WebScraper(String tag) {
+    public WebScraper(String tag, Label outputLabel) {
+        m_outputLabel = outputLabel;
         initializeConnection(tag);
     }
     
     /* ************** FIELDS ************** */
     private boolean scrapeCompleted = false;
-    
     private final String BASE_URL = "https://www.amazon.com/s?k=";
-    
     private Document document = null;
+    private Label m_outputLabel;
     
     /* ************** MUTATORS ************** */
     private void setDocument(Document doc) {
@@ -53,6 +54,7 @@ public class WebScraper {
             url += tag;
         }
         try {
+            m_outputLabel.setText("Loading...");
             setDocument(Jsoup.connect(url).get());
         }
         catch(MalformedURLException e) {
@@ -72,11 +74,11 @@ public class WebScraper {
         }
     }
     
-    public void fetchData() {
+    public void fetchData(boolean loading, Label outputLabel) {
         setScrapeCompleted(false);
         System.out.println("Scrape begun...");
         Element element = null;
-        boolean loading = true;
+        loading = true;
         while(loading) {
             element = this.document.getElementById("nav-logo");
             if(element != null) {
@@ -84,7 +86,11 @@ public class WebScraper {
             }
         }
         setScrapeCompleted(true);
-        System.out.println("Finished Scraping");
-        System.out.println("Element: " + element.outerHtml());
+
+        String output = "Finished Scraping";
+        output += "\nResults:";
+        output += element.outerHtml();
+        System.out.println(output);
+        m_outputLabel.setText(output);
     }
 }
