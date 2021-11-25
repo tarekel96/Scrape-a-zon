@@ -25,15 +25,16 @@
          </font>
       </TextField>
       <Button id="searchButton" fx:id="searchButton" layoutX="593.0" layoutY="176.0" mnemonicParsing="false" onAction="#submit" prefHeight="40.0" prefWidth="100.0" text="Search" />
-      <Label id="userOutput" fx:id="outputLabel" alignment="CENTER" layoutX="371.0" layoutY="287.0" text="Output">
+      <Label id="userOutput" fx:id="outputLabel" alignment="CENTER" layoutX="60.0" layoutY="238.0" prefHeight="26.0" prefWidth="679.0" text="Output" textAlignment="CENTER">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <ProgressBar id="scrapeProgressBar" layoutX="243.0" layoutY="271.0" prefHeight="40.0" prefWidth="314.0" progress="0.0" styleClass="scrapeProgressBar">
+      <ProgressBar id="scrapeProgressBar" fx:id="scrapeProgressBar" layoutX="243.0" layoutY="271.0" prefHeight="40.0" prefWidth="314.0" styleClass="scrapeProgressBar" visible="false">
          <effect>
             <Blend />
          </effect>
       </ProgressBar>
+      <TextFlow id="outputText" fx:id="outputText" layoutX="89.0" layoutY="291.0" prefHeight="242.0" prefWidth="621.0" />
    </children>
 </AnchorPane>

@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
+import javafx.scene.text.TextFlow;
 
 /**
  * FXML Controller class
@@ -31,10 +32,8 @@ public class AppController {
     @FXML
     private ProgressBar scrapeProgressBar;
     
-//    @FXML
-//    private void initialize() {
-//        System.out.println(scrapeProgressBar.toString());
-//    }
+    @FXML
+    private TextFlow outputText;
     
     // Non-FXML fields 
     private WebScraper Scraper;
@@ -53,8 +52,11 @@ public class AppController {
     }
     
     public void submit(ActionEvent event) {
+        //System.out.println(scrapeProgressBar);
+        //scrapeProgressBar.setVisible(true);
         userInput = userSearchInput.getText();
-        Scraper = new WebScraper(userInput, outputLabel);
-        Scraper.fetchData(getLoading(), outputLabel);
+        Scraper = new WebScraper(userInput, outputLabel, outputText);
+        Scraper.fetchData(getLoading());
+        //scrapeProgressBar.setVisible(false);
     }
 }

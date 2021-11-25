@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.SocketTimeoutException;
 import javafx.scene.control.Label;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.UnsupportedMimeTypeException;
@@ -22,16 +24,20 @@ import org.jsoup.nodes.Element;
 public class WebScraper {
     
     // Overloaded Constructor
-    public WebScraper(String tag, Label outputLabel) {
+    public WebScraper(String tag, Label outputLabel, TextFlow outputText) {
+        m_tag = tag; // tag is userInput
         m_outputLabel = outputLabel;
+        m_outputText = outputText;
         initializeConnection(tag);
     }
     
     /* ************** FIELDS ************** */
+    private String m_tag;
     private boolean scrapeCompleted = false;
     private final String BASE_URL = "https://www.amazon.com/s?k=";
     private Document document = null;
     private Label m_outputLabel;
+    private TextFlow m_outputText;
     
     /* ************** MUTATORS ************** */
     private void setDocument(Document doc) {
@@ -74,11 +80,14 @@ public class WebScraper {
         }
     }
     
-    public void fetchData(boolean loading, Label outputLabel) {
+    // method for fetching data via web JSoup
+    public void fetchData(boolean loading) {
         setScrapeCompleted(false);
         System.out.println("Scrape begun...");
         Element element = null;
         loading = true;
+        
+        // brute force solution of updating loading state
         while(loading) {
             element = this.document.getElementById("nav-logo");
             if(element != null) {
@@ -86,11 +95,15 @@ public class WebScraper {
             }
         }
         setScrapeCompleted(true);
-
-        String output = "Finished Scraping";
-        output += "\nResults:";
+        // set label
+        String outputLabelStr = "Finished Scraping for " + m_tag;
+        outputLabelStr += "\nResults:\n";
+        m_outputLabel.setText(outputLabelStr);
+        
+        String output = "";
         output += element.outerHtml();
+        Text text = new Text(output);
+        m_outputText.getChildren().add(text);
         System.out.println(output);
-        m_outputLabel.setText(output);
     }
 }
