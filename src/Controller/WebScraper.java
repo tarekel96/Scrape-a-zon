@@ -8,6 +8,7 @@ package Controller;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.SocketTimeoutException;
+import java.util.ArrayList;
 import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
@@ -16,6 +17,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.UnsupportedMimeTypeException;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 /**
  *
@@ -35,6 +37,7 @@ public class WebScraper {
     private String m_tag;
     private boolean scrapeCompleted = false;
     private final String BASE_URL = "https://www.amazon.com/s?k=";
+    private final String PROD_CLASS_NAME = "a-size-base-plus a-color-base a-text-normal";
     private Document document = null;
     private Label m_outputLabel;
     private TextFlow m_outputText;
@@ -80,30 +83,46 @@ public class WebScraper {
         }
     }
     
+    // helper method for getting size of results as a String
+    private String returnResultSizeStr(ArrayList list) {
+        return (new Integer(list.size())).toString();
+    }
+    
     // method for fetching data via web JSoup
     public void fetchData(boolean loading) {
         setScrapeCompleted(false);
         System.out.println("Scrape begun...");
         Element element = null;
+        Elements products = null;
+
         loading = true;
         
         // brute force solution of updating loading state
         while(loading) {
-            element = this.document.getElementById("nav-logo");
-            if(element != null) {
+            //element = this.document.getElementById("nav-logo");
+            products = this.document.getElementsByClass(PROD_CLASS_NAME);
+            if(products != null) {
                 loading = false;
             }
         }
-        setScrapeCompleted(true);
-        // set label
-        String outputLabelStr = "Finished Scraping for " + m_tag;
-        outputLabelStr += "\nResults:\n";
-        m_outputLabel.setText(outputLabelStr);
+        for (Element product : products) {
+
+            System.out.println(product.text());
+
+        }
+        System.out.println(returnResultSizeStr(products));
+        System.out.println(products);
         
-        String output = "";
-        output += element.outerHtml();
-        Text text = new Text(output);
-        m_outputText.getChildren().add(text);
-        System.out.println(output);
+//        setScrapeCompleted(true);
+//        // set label
+//        String outputLabelStr = "Finished Scraping for " + m_tag;
+//        outputLabelStr += "\nResults:\n";
+//        m_outputLabel.setText(outputLabelStr);
+//        
+//        String output = "";
+//        output += element.outerHtml();
+//        Text text = new Text(output);
+//        m_outputText.getChildren().add(text);
+//        System.out.println(output);
     }
 }
