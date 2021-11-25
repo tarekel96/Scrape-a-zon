@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Scrap-a-zon.jar" size="25945" download="eager" />
+    <jar href="Scrap-a-zon.jar" size="26484" download="eager" />
     <jar href="lib/cssfx-1.1.1.jar" size="44115" download="eager" />
     <jar href="lib/jsoup-1.14.3.jar" size="423395" download="eager" />
   </resources>

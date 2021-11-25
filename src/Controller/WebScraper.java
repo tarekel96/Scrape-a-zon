@@ -38,6 +38,9 @@ public class WebScraper {
     private boolean scrapeCompleted = false;
     private final String BASE_URL = "https://www.amazon.com/s?k=";
     private final String PROD_CLASS_NAME = "a-size-base-plus a-color-base a-text-normal";
+    private final String PROD_CLASS_PRICE = "a-offscreen";
+    private final String PROD_CLASS_numREVIEWS = "a-size-base";
+    private final String PROD_CLASS_ratingREVIEWS = "a-icon-alt";
     private Document document = null;
     private Label m_outputLabel;
     private TextFlow m_outputText;
@@ -100,7 +103,7 @@ public class WebScraper {
         // brute force solution of updating loading state
         while(loading) {
             //element = this.document.getElementById("nav-logo");
-            products = this.document.getElementsByClass(PROD_CLASS_NAME);
+            products = this.document.getElementsByClass(PROD_CLASS_PRICE);
             if(products != null) {
                 loading = false;
             }
