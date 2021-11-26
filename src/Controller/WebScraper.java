@@ -5,21 +5,19 @@
  */
 package Controller;
 
+import Model.GridMatrix;
 import Model.Helper;
 import Model.Product;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.SocketTimeoutException;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 import javafx.scene.control.Label;
 import javafx.scene.text.TextFlow;
 import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.UnsupportedMimeTypeException;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 /**
@@ -37,15 +35,16 @@ public class WebScraper {
     }
     
     /* ************** FIELDS ************** */
-    private String m_tag;
-    private boolean scrapeCompleted = false;
     private final String PROD_CLASS_NAME = "h3";
     private final String PROD_CLASS_PRICE = "price_color";
     private final String PROD_CLASS_AVAILABILITY = "instock availability";
+    private String m_tag;
+    private boolean scrapeCompleted = false;
     private Elements productNames;
     private Elements productPrices;
     private Elements productAvailabilities;
     private ArrayList<Product> products = new ArrayList();
+    private GridMatrix m_gridMatrix;
     private Document document = null;
     private Label m_outputLabel;
     private TextFlow m_outputText;
@@ -66,6 +65,9 @@ public class WebScraper {
             boolean inStock = assignAvailability(productAvailabilities.get(i).text());
             products.add(new Product(name, price, inStock));
         }
+    }
+    
+    public void printProducts() {
         // print out items to ensure that were created
         for(Product cp: products) {
             System.out.println(cp);
@@ -193,6 +195,16 @@ public class WebScraper {
             loading = false;
         }
         System.out.println("Scrape completed");
+        // instantiate the products using Product model
         generateProducts();
+        // generate the GridMatrix of products
+        int rows = productAvailabilities.size(); 
+        int columns = 3;
+        ArrayList<String> columnTitles = new ArrayList();
+        columnTitles.add("Name");
+        columnTitles.add("Price");
+        columnTitles.add("Is Available (in stock)");
+        m_gridMatrix = new GridMatrix(rows, columns, columnTitles, products);
+        System.out.println(m_gridMatrix);
     }
 }

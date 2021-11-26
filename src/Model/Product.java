@@ -26,6 +26,25 @@ public class Product {
     private boolean m_isAvailable;
     
     /* METHODS */
+    public String getAttrByIndex(int i) {
+        String ret = "";
+        switch(i) {
+            case 0:
+                ret = m_name;
+                break;
+            case 1:
+                ret = Double.toString(m_price);
+                break;
+            case 2:
+                ret = Boolean.toString(m_isAvailable);
+                break;
+            default:
+                ret = "";
+                break;
+        }
+        return ret;
+    }
+    
     @Override
     public String toString() {
         String ret = "\n******************\nProduct";
