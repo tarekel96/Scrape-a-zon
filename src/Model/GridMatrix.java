@@ -64,19 +64,4 @@ public class GridMatrix {
         }
         return ret;
     }
-    
-    /*
-    self.rows = rows
-    self.columns = columns
-    self.column_titles = column_titles
-    # create 2D int list via Python list comprehension filled with random numbers btwn 0 and 1001 (exclusive)
-    self.matrix = [[randrange(0, 1001) for x in range(self.columns)] for y in range(self.rows)]
-    self.output_file = output_file
-    for col in self.column_titles:
-        if col_counter == len(self.column_titles) - 1:
-                inFile.write(col)
-        else:
-                inFile.write(col + ',')
-        col_counter += 1
-    */
 }

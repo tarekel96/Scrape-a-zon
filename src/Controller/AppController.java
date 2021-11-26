@@ -5,6 +5,8 @@
  */
 package Controller;
 
+import Model.Helper;
+import java.util.ArrayList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -39,7 +41,7 @@ public class AppController {
     private WebScraper Scraper;
     private String userInput;
     private boolean m_loading;
-   
+    private ArrayList<String> options = new ArrayList();
     
     /* ************** Methods ************** */
     // loading mutator
@@ -52,11 +54,22 @@ public class AppController {
     }
     
     public void submit(ActionEvent event) {
-        //System.out.println(scrapeProgressBar);
-        //scrapeProgressBar.setVisible(true);
+        options.add("travel");
+        options.add("mystery");
+        options.add("historical");
+        options.add("fiction");
+        options.add( "classics");
+        options.add("fiction");
         userInput = userSearchInput.getText();
+        if(Helper.inputIsValid(userInput.toLowerCase(), options) == false) {
+            outputText.setText("Error: An invalid book category was entered.\nPlease follow directions.");
+            return;
+        }
         Scraper = new WebScraper(userInput, outputLabel, outputText);
         Scraper.fetchData(getLoading());
+        if(!options.isEmpty()) {
+            options.clear();
+        }
         //scrapeProgressBar.setVisible(false);
     }
 }

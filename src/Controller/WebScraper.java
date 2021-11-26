@@ -122,7 +122,6 @@ public class WebScraper {
         tag = tag.toLowerCase();
         String ret = "";
         switch(tag) {
-           // String temp = "Travel | Mystery | Historical Fiction | Classics | Fiction";
             case "travel":
                 ret = "travel_2";
                 break;

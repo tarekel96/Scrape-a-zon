@@ -5,8 +5,7 @@
  */
 package Model;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,6 +13,10 @@ import java.util.Map;
  * Static class for general helper methods
  */
 public class Helper {
+    
+    public static boolean inputIsValid(String userInput, ArrayList<String> validOptions) {
+        return validOptions.contains(userInput);
+    }
 
 
     public static String convertIntToStr(int i) {
