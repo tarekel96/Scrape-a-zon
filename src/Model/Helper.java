@@ -5,12 +5,41 @@
  */
 package Model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author Tarek
  * Static class for general helper methods
  */
 public class Helper {
+    
+    public static String getTag(String tag) {
+        String ret = "";
+        switch(tag) {
+            case "Travel":
+                ret = "travel_2";
+                break;
+            case "Mystery":
+                ret = "mystery_3";
+                break;
+            case "Historical Fiction":
+                ret = "historical-fiction_4";
+                break;
+            case "Classics":
+                ret = "classics_6";
+                break;
+            case "Fiction":
+                ret = "fiction_10";
+                break;
+            default:
+                ret = "books_1";
+                break;
+        }
+        return ret;
+    }
+
 
     public static String convertIntToStr(int i) {
         return (new Integer(i)).toString();
