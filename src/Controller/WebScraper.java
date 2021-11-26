@@ -44,7 +44,7 @@ public class WebScraper {
     private Elements productPrices;
     private Elements productAvailabilities;
     private ArrayList<Product> products = new ArrayList();
-    private GridMatrix m_gridMatrix;
+    private static GridMatrix m_gridMatrix;
     private Document document = null;
     private Label m_outputLabel;
     private Text m_outputText;
