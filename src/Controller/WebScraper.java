@@ -13,7 +13,7 @@ import java.net.MalformedURLException;
 import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 import javafx.scene.control.Label;
-import javafx.scene.text.TextFlow;
+import javafx.scene.text.Text;
 import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.UnsupportedMimeTypeException;
@@ -27,7 +27,7 @@ import org.jsoup.select.Elements;
 public class WebScraper {
     
     // Overloaded Constructor
-    public WebScraper(String tag, Label outputLabel, TextFlow outputText) {
+    public WebScraper(String tag, Label outputLabel, Text outputText) {
         m_tag = tag; // tag is userInput
         m_outputLabel = outputLabel;
         m_outputText = outputText;
@@ -47,7 +47,7 @@ public class WebScraper {
     private GridMatrix m_gridMatrix;
     private Document document = null;
     private Label m_outputLabel;
-    private TextFlow m_outputText;
+    private Text m_outputText;
     
     /* ************** MUTATORS ************** */
     private void setDocument(Document doc) {
@@ -206,5 +206,7 @@ public class WebScraper {
         columnTitles.add("Is Available (in stock)");
         m_gridMatrix = new GridMatrix(rows, columns, columnTitles, products);
         System.out.println(m_gridMatrix);
+        m_outputLabel.setText("Results: ");
+        m_outputText.setText(m_gridMatrix.toString());
     }
 }
