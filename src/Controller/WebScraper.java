@@ -169,7 +169,7 @@ public class WebScraper {
     }
     
     // method for fetching data via web JSoup
-    public void fetchData(boolean loading) {
+    public int fetchData(boolean loading) {
         clearCollections();
         setScrapeCompleted(false);
         System.out.println("Scrape begun...");
@@ -189,7 +189,10 @@ public class WebScraper {
             
             boolean test = listsAreEqualSize();
             if(test == false) {
-                System.out.println("Error: The data was not able to fetched correctly");
+                String errMessage = "Error: The data was not able to fetched correctly";
+                System.out.println(errMessage);
+                m_outputLabel.setText(errMessage);
+                return -1; // -1 indicates the fetch failed
             }
             loading = false;
         }
@@ -207,5 +210,6 @@ public class WebScraper {
         System.out.println(m_gridMatrix);
         m_outputLabel.setText("Results: ");
         m_outputText.setText(m_gridMatrix.toString());
+        return 0;
     }
 }

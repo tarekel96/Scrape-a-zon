@@ -33,9 +33,10 @@ public class AppController {
     private Button searchButton;
     @FXML
     private ProgressBar scrapeProgressBar;
-    
     @FXML
     private Text outputText;
+    @FXML
+    private Button printButton;
     
     // Non-FXML fields 
     private WebScraper Scraper;
@@ -54,6 +55,7 @@ public class AppController {
     }
     
     public void submit(ActionEvent event) {
+        printButton.setVisible(false);
         options.add("travel");
         options.add("mystery");
         options.add("historical");
@@ -66,10 +68,12 @@ public class AppController {
             return;
         }
         Scraper = new WebScraper(userInput, outputLabel, outputText);
-        Scraper.fetchData(getLoading());
+        int response = Scraper.fetchData(getLoading());
+        if(response == 0) {
+            printButton.setVisible(true);
+        }
         if(!options.isEmpty()) {
             options.clear();
         }
-        //scrapeProgressBar.setVisible(false);
     }
 }

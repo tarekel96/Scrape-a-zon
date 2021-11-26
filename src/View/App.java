@@ -14,10 +14,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-//import org.fxmisc.cssfx.CSSFX;
-//import javafx.scene.control.Button;
-//import javafx.event.ActionEvent;
-//import javafx.event.EventHandler;
 /**
  *
  * @author Tarek
