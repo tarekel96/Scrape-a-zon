@@ -19,7 +19,7 @@
             <Font name="Helvetica" size="28.0" />
          </font>
       </Text>
-      <TextField id="userSearchInput" fx:id="userSearchInput" layoutX="243.0" layoutY="180.0" prefHeight="27.0" prefWidth="314.0" promptText="Enter keywords to scrape from Amazon...">
+      <TextField id="userSearchInput" fx:id="userSearchInput" layoutX="250.0" layoutY="180.0" prefHeight="27.0" prefWidth="314.0" promptText="Enter one of the valid categories...">
          <font>
             <Font size="16.0" />
          </font>

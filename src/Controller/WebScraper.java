@@ -39,18 +39,15 @@ public class WebScraper {
     /* ************** FIELDS ************** */
     private String m_tag;
     private boolean scrapeCompleted = false;
-    private final String BASE_URL = "http://books.toscrape.com/";
-    private final String PROD_CLASS_NAME = "result-heading";
-    private final String PROD_CLASS_PRICE = "span.result-meta span.result-price";
-    private final String PROD_CLASS_LOCATION = "result-meta result-hood";
+    private final String PROD_CLASS_NAME = "h3";
+    private final String PROD_CLASS_PRICE = "price_color";
+    private final String PROD_CLASS_AVAILABILITY = "instock availability";
     private Elements productNames;
     private Elements productPrices;
-    private Elements productOrigins;
-    private HashMap<String, Elements> resultsHashMap = new HashMap();
+    private Elements productAvailabilities;
     private ArrayList<Product> products = new ArrayList();
     private Document document = null;
     private Label m_outputLabel;
-    
     private TextFlow m_outputText;
     
     /* ************** MUTATORS ************** */
@@ -63,15 +60,23 @@ public class WebScraper {
     }
     
     public void generateProducts() { 
-        
+        for(int i = 0; i < productNames.size(); ++i) {
+            String name = productNames.get(i).text();
+            double price = Double.parseDouble(productPrices.get(i).text().substring(1));
+            boolean inStock = assignAvailability(productAvailabilities.get(i).text());
+            products.add(new Product(name, price, inStock));
+        }
+        // print out items to ensure that were created
+        for(Product cp: products) {
+            System.out.println(cp);
+        }
     }
     
     public void clearCollections() {
         try {
             productNames.clear();
             productPrices.clear();
-            productOrigins.clear();
-            resultsHashMap.clear();
+            productAvailabilities.clear();
         }
         catch(Exception e) {
             System.out.println("Error: An error occurred in trying to clear collections");
@@ -83,16 +88,10 @@ public class WebScraper {
         return scrapeCompleted;
     }
     
-    public String attachTag(String tag) {
-        return "sss?query=?" + tag;
-    }
-    
     /* ************** HELEPER FUNCTIONS ************** */
     private void initializeConnection(String tag) {
-        String url = BASE_URL;
-        if(tag != null) {
-            url += attachTag(tag);
-        }
+        String url = "https://books.toscrape.com/catalogue/category/books/" + getProperTag(tag) + "/index.html";
+        System.out.println("URL: " + url);
         try {
             m_outputLabel.setText("Loading...");
             setDocument(Jsoup
@@ -117,22 +116,53 @@ public class WebScraper {
         }
     }
     
+    public String getProperTag(String tag) {
+        tag = tag.toLowerCase();
+        String ret = "";
+        switch(tag) {
+            case "travel":
+                ret = "travel_2";
+                break;
+            case "mystery":
+                ret = "mystery_3";
+                break;
+            case "historical fiction":
+                ret = "historical-fiction_4";
+                break;
+            case "classics":
+                ret = "classics_6";
+                break;
+            case "fiction":
+                ret = "fiction_10";
+                break;
+            default:
+                ret = "books_1";
+                break;
+        }
+        return ret;
+    }
+    
     // helper method for getting size of results as a String
     private String returnResultSizeStr(ArrayList list) {
         return (new Integer(list.size())).toString();
     }
     
-    private boolean listsAreEqualSize(HashMap<String, Elements> hm, int correctSize) {
-         // using for-each loop for iteration over Map.entrySet()
-        System.out.println(Helper.convertIntToStr(correctSize));
-        for (Map.Entry<String, Elements> entry : hm.entrySet()){
-            System.out.println(Helper.convertIntToStr(entry.getValue().size()));
-            if(entry.getValue().size() != correctSize) { 
-                System.out.println("Error: The list sizes are not of equal lengths");
-                return false;
-            }
+    private boolean listsAreEqualSize() {
+        // using for-each loop for iteration over Map.entrySet()
+        if(productNames.size() != productPrices.size()) {
+            return false;
+        }
+        if(productNames.size() != productAvailabilities.size()) {
+            return false;
+        }
+        if(productPrices.size() != productAvailabilities.size()) {
+            return false;
         }
         return true;
+    }
+    
+    public boolean assignAvailability(String text) {
+        return text.equals("In stock");
     }
     
     // method for fetching data via web JSoup
@@ -143,34 +173,24 @@ public class WebScraper {
         loading = true;
         
         // brute force solution of updating loading state
-        Elements tempPrices = null;
-        ArrayList<Element> pricesArrayList = new ArrayList();
         while(loading) {
-            productNames = this.document.getElementsByClass(PROD_CLASS_NAME);
+            /* get NAMES */
+            productNames = this.document.select(PROD_CLASS_NAME);
             System.out.println("Product Names Size: " + Helper.convertIntToStr(productNames.size()));
-            resultsHashMap.put("productNames", productNames);
+            /* get PRICES */
             productPrices = this.document.getElementsByClass(PROD_CLASS_PRICE);
             System.out.println("Product Prices Size: " + Helper.convertIntToStr(productPrices.size()));
-//            tempPrices = this.document.getElementsByClass(PROD_CLASS_PRICE);
-//            // remove duplicate prices from tempPrices and store in productPrices
-//            for (int i = 0; i < tempPrices.size(); ++i) {
-//                if(i % 2 == 0) {
-//                    pricesArrayList.add(tempPrices.get(i));
-//                }
-//            }
-            // clear tempPrices
-//            tempPrices.clear();
-//            productPrices = new Elements(pricesArrayList);
-            resultsHashMap.put("productPrices", productPrices);
-            //productOrigins = this.document.getElementsByClass(PROD_CLASS_LOCATION);
-            //System.out.println("Product Origins Size: " + Helper.convertIntToStr(productOrigins.size()));
-            //resultsHashMap.put("productOrigins", productOrigins);
-            boolean test = listsAreEqualSize(resultsHashMap, resultsHashMap.get("productNames").size());
+            /* get AVAILABILITIES */
+            productAvailabilities = this.document.getElementsByClass(PROD_CLASS_AVAILABILITY);
+            System.out.println("Product Availability Size: " + Helper.convertIntToStr(productAvailabilities.size()));
+            
+            boolean test = listsAreEqualSize();
             if(test == false) {
                 System.out.println("Error: The data was not able to fetched correctly");
             }
             loading = false;
         }
         System.out.println("Scrape completed");
+        generateProducts();
     }
 }

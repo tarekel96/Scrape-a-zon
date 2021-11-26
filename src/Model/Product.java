@@ -13,17 +13,17 @@ package Model;
 public class Product {
     
     /* CONSTRUCTOR */
-    public Product(String name, double price, String origin) {
+    public Product(String name, double price, boolean isAvailable) {
         m_name = name;
         m_price = price;
-        m_origin = origin;
+        m_isAvailable = isAvailable;
     }
     
     
     /* FIELDS */
     private String m_name;
     private double m_price;
-    private String m_origin;
+    private boolean m_isAvailable;
     
     /* METHODS */
     @Override
@@ -31,7 +31,7 @@ public class Product {
         String ret = "\n******************\nProduct";
         ret += "\nName: " + m_name;
         ret += "\nPrice: " + Helper.convertDoubleToStr(m_price);
-        ret += "\nLocation: " + m_origin;
+        ret += "\nIs Available: " + Helper.convertBooleanToStr(m_isAvailable);
         return ret;
     }
 }
