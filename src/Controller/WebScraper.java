@@ -120,6 +120,7 @@ public class WebScraper {
         tag = tag.toLowerCase();
         String ret = "";
         switch(tag) {
+           // String temp = "Travel | Mystery | Historical Fiction | Classics | Fiction";
             case "travel":
                 ret = "travel_2";
                 break;
@@ -161,6 +162,7 @@ public class WebScraper {
         return true;
     }
     
+    // nneded bc Product model availability field is a boolean
     public boolean assignAvailability(String text) {
         return text.equals("In stock");
     }
