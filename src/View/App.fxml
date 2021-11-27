@@ -50,6 +50,6 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <Button id="printButton" fx:id="printButton" layoutX="90.0" layoutY="183.0" mnemonicParsing="false" text="Print" visible="false" />
+      <Button id="saveButton" fx:id="saveButton" layoutX="90.0" layoutY="183.0" mnemonicParsing="false" onAction="#saveToFile" text="Save Results" visible="false" />
    </children>
 </AnchorPane>

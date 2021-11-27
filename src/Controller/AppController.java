@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import Model.FileHelper;
 import Model.Helper;
 import java.util.ArrayList;
 import javafx.event.ActionEvent;
@@ -36,13 +37,14 @@ public class AppController {
     @FXML
     private Text outputText;
     @FXML
-    private Button printButton;
+    private Button saveButton;
     
     // Non-FXML fields 
-    private WebScraper Scraper;
-    private String userInput;
+    private WebScraper m_scraper;
+    private FileHelper m_fileHelper;
+    private String m_userInput;
     private boolean m_loading;
-    private ArrayList<String> options = new ArrayList();
+    private ArrayList<String> m_options = new ArrayList();
     
     /* ************** Methods ************** */
     // loading mutator
@@ -55,25 +57,39 @@ public class AppController {
     }
     
     public void submit(ActionEvent event) {
-        printButton.setVisible(false);
-        options.add("travel");
-        options.add("mystery");
-        options.add("historical");
-        options.add("fiction");
-        options.add( "classics");
-        options.add("fiction");
-        userInput = userSearchInput.getText();
-        if(Helper.inputIsValid(userInput.toLowerCase(), options) == false) {
+        saveButton.setVisible(false);
+        m_options.add("travel");
+        m_options.add("mystery");
+        m_options.add("historical");
+        m_options.add("fiction");
+        m_options.add( "classics");
+        m_options.add("fiction");
+        m_userInput = userSearchInput.getText();
+        if(Helper.inputIsValid(m_userInput.toLowerCase(), m_options) == false) {
             outputText.setText("Error: An invalid book category was entered.\nPlease follow directions.");
             return;
         }
-        Scraper = new WebScraper(userInput, outputLabel, outputText);
-        int response = Scraper.fetchData(getLoading());
+        m_scraper = new WebScraper(m_userInput, outputLabel, outputText);
+        int response = m_scraper.fetchData(getLoading());
         if(response == 0) {
-            printButton.setVisible(true);
+            saveButton.setVisible(true);
         }
-        if(!options.isEmpty()) {
-            options.clear();
+        if(!m_options.isEmpty()) {
+            m_options.clear();
+        }
+    }
+    
+    public void saveToFile(ActionEvent event) {
+        // only triggers if the saveButton is visible
+        if(saveButton.isVisible()) {
+            if(m_scraper.getGridMatrix() == null) {
+                System.out.println("Error: Cannot write results to file because the scraper is missing a GridMatrix.");
+            }
+            // only writes if has matrix to write to file
+            else {
+                m_fileHelper = new FileHelper(m_scraper.getGridMatrix());
+                m_fileHelper.writeOutputToFile();
+            }
         }
     }
 }
