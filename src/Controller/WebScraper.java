@@ -44,7 +44,7 @@ public class WebScraper {
     private Elements productPrices;
     private Elements productAvailabilities;
     private ArrayList<Product> products = new ArrayList();
-    private static GridMatrix m_gridMatrix;
+    private GridMatrix m_gridMatrix;
     private Document document = null;
     private Label m_outputLabel;
     private Text m_outputText;
@@ -88,6 +88,10 @@ public class WebScraper {
     /* ************** ACCESSORS ************** */
     public boolean getScrapeStatus() {
         return scrapeCompleted;
+    }
+    
+    public GridMatrix getGridMatrix() {
+        return m_gridMatrix;
     }
     
     /* ************** HELEPER FUNCTIONS ************** */
