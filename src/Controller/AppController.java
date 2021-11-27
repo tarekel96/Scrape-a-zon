@@ -60,12 +60,12 @@ public class AppController {
         saveButton.setVisible(false);
         m_options.add("travel");
         m_options.add("mystery");
-        m_options.add("historical");
+        m_options.add("historicalfiction");
         m_options.add("fiction");
         m_options.add( "classics");
         m_options.add("fiction");
         m_userInput = userSearchInput.getText();
-        if(Helper.inputIsValid(m_userInput.toLowerCase(), m_options) == false) {
+        if(Helper.inputIsValid(m_userInput.toLowerCase().replaceAll("\\s", ""), m_options) == false) {
             outputText.setText("Error: An invalid book category was entered.\nPlease follow directions.");
             return;
         }
@@ -89,6 +89,10 @@ public class AppController {
             else {
                 m_fileHelper = new FileHelper(m_scraper.getGridMatrix());
                 m_fileHelper.writeOutputToFile();
+                String fullPathToOutput = m_fileHelper.getAbsolutePath();
+                outputText.setText("Results have been saved to\n" + fullPathToOutput + "."
+                        + "\nTo continue, enter a new search.");
+                saveButton.setVisible(false);
             }
         }
     }

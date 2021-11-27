@@ -123,7 +123,7 @@ public class WebScraper {
     }
     
     public String getProperTag(String tag) {
-        tag = tag.toLowerCase();
+        tag = tag.toLowerCase().replaceAll("\\s", "");
         String ret = "";
         switch(tag) {
             case "travel":
@@ -132,7 +132,7 @@ public class WebScraper {
             case "mystery":
                 ret = "mystery_3";
                 break;
-            case "historical fiction":
+            case "historicalfiction":
                 ret = "historical-fiction_4";
                 break;
             case "classics":

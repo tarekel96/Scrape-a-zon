@@ -33,11 +33,12 @@ public class FileHelper {
     private String m_outputFile;
     private String m_fileExtension;
     private String m_fullFileName;
+    private File inFile;
     private GridMatrix m_gridMatrix;
     
     /* METHODS */
     public void writeOutputToFile() {
-        File inFile = new File(m_fullFileName);
+        inFile = new File(m_fullFileName);
         // check if a file exists; if so, delete and recreate file
         if(inFile.exists()) {
             try {
@@ -74,6 +75,10 @@ public class FileHelper {
             System.out.println("Error: The file cannot be opened.");
             err.printStackTrace();
         }
+    }
+    
+    public String getAbsolutePath() {
+        return inFile.getAbsolutePath();
     }
         
 }
