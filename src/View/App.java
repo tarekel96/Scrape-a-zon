@@ -43,7 +43,8 @@ public class App extends Application {
             // set stage size
             stage.setHeight(600);
             stage.setWidth(900);
-
+            stage.setResizable(false);
+            
             // default positioning of stage
             stage.setX(50);
             stage.setY(50);
