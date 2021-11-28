@@ -130,7 +130,7 @@ public class WebScraper {
             e.printStackTrace();
         }
         catch(IOException e) {
-            String errMsg = "Error: An unknown error occurred in trying to connect to Amazon";
+            String errMsg = "Error: An unknown error occurred in trying to connect to https://books.toscrape.com";
             System.out.println(errMsg);
             m_outputText.setText(errMsg);
             e.printStackTrace();
