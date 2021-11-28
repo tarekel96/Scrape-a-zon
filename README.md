@@ -54,6 +54,11 @@ java -jar Scrap-a-zon.jar
 - Helper.java
 - Product.java
 - UserInput.java
+### View directory
+- App.java
+- App.fxml
+- app.css
+- assets
 
 ## Sources referred to:
 - JavaFx documentation: https://docs.oracle.com/javase/8/javafx/api/toc.htm
