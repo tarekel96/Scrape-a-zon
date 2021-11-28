@@ -106,19 +106,34 @@ public class WebScraper {
                     .get());
         }
         catch(MalformedURLException e) {
-            System.out.println("Error: the request URL is not a HTTP or HTTPS URL, or is otherwise malformed");
+            String errMsg = "Error: the request URL is not a HTTP or HTTPS URL, or is otherwise malformed";
+            System.out.println(errMsg);
+            m_outputText.setText(errMsg);
+            e.printStackTrace();
         }
         catch(HttpStatusException e) {
-            System.out.println("Error: the response is not OK and HTTP response errors are not ignored");
+            String errMsg = "Error: the response is not OK and HTTP response errors are not ignored";
+            System.out.println(errMsg);
+            m_outputText.setText(errMsg);
+            e.printStackTrace();
         }
         catch(UnsupportedMimeTypeException e) {
-            System.out.println("Error: the response mime type is not supported and those errors are not ignored");
+            String errMsg = "Error: the response mime type is not supported and those errors are not ignored";
+            System.out.println(errMsg);
+            m_outputText.setText(errMsg);
+            e.printStackTrace();
         }
         catch(SocketTimeoutException e) {
-            System.out.println("Error: the connection times out");
+            String errMsg = "Error: the connection times out";
+            System.out.println(errMsg);
+            m_outputText.setText(errMsg);
+            e.printStackTrace();
         }
         catch(IOException e) {
-            System.out.println("Error: An unknown error occurred in trying to connect to Amazon");
+            String errMsg = "Error: An unknown error occurred in trying to connect to Amazon";
+            System.out.println(errMsg);
+            m_outputText.setText(errMsg);
+            e.printStackTrace();
         }
     }
     
